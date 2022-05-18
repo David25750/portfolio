@@ -4,25 +4,30 @@
     <header class="container-fluid d-flex flex-wrap justify-content-center py-1  navbar-dark fixed-top bg-dark">
       <b-navbar toggleable="lg">
         <b-navbar-brand href="#" class="d-flex align-items-center px-5 me-lg-auto text-light text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg><span class="fs-4">logo</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 215.842 111.953">
+            <g id="logo" transform="translate(0.016 0.002)">
+              <path id="Tracé_1" data-name="Tracé 1" d="M54.92,52.15l14.8-15.7C34.27-3.63-2.9,31.41.75,64.02c-.26,41.96,44.31,57.75,65.22,40.62L143.71,4.95H109.73L49.22,86.48c-13.51,4.41-27.6-7.59-27.18-23.59C25.99,30.7,50.98,36.83,54.92,52.15Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+              <path id="Tracé_2" data-name="Tracé 2" d="M160.89,59.8l-14.8,15.7c35.44,40.09,72.62,5.04,68.97-27.57.26-41.96-44.31-57.75-65.22-40.62L72.1,107h33.98l60.51-81.53c13.51-4.41,27.6,7.59,27.18,23.59-3.95,32.19-28.94,26.06-32.88,10.74Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+            </g>
+          </svg>
+
+
         </b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav class="m-lg-auto" right>
           <b-navbar-nav class="nav nav-pills text-center">
-            <b-nav-item ><a href="#" class="nav-link my-2" aria-current="page">Accueil</a></b-nav-item>
-            <b-nav-item ><a href="#" class="nav-link my-2">Qui suis-je</a></b-nav-item>
-            <b-nav-item ><a href="#" class="nav-link my-2">Mes projets</a></b-nav-item>
-            <b-nav-item ><a  href="#"  class="nav-link"><button class="btn btn-outline-primary" type="button">Contactez - moi</button></a></b-nav-item>
+            <a href="/" class="nav-link my-2" aria-current="page">Accueil</a>
+            <a href="#biographie" class="nav-link my-2">Qui suis-je</a>
+            <a href="#projets" class="nav-link my-2">Mes projets</a>
+            <a  href="#contact" class="nav-link"><button class="btn btn-outline-primary" type="button">Contactez - moi</button></a>
           </b-navbar-nav>
           <b-navbar-nav>
 
             <b-nav-item-dropdown text="Lang" class="px-2">
-              <b-dropdown-item href="#">EN</b-dropdown-item>
-              <b-dropdown-item href="#">ES</b-dropdown-item>
-              <b-dropdown-item href="#">RU</b-dropdown-item>
-              <b-dropdown-item href="#">FA</b-dropdown-item>
+              <b-dropdown-item href="#">FR</b-dropdown-item>
+
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>
@@ -71,7 +76,7 @@
               </svg> david.phlp25</a></li>
             </ul>
             <div class="d-flex gap-4 text-center justify-content-center">
-              <a target="#contact"><button class="btn btn-primary px-5" type="button">Contactez - moi</button></a>
+              <a href="components/Contact.vue#contact"><button class="btn btn-primary px-5" type="button">Contactez - moi</button></a>
             </div>
           </form>
         </div>
@@ -86,11 +91,21 @@
 </template>
 
 <script>
+import Page from "./components/Page.vue";
+import Biographie from "./components/Biographie.vue";
+import Contact from "./components/Contact.vue";
+import Projets from "./components/Projets.vue";
 export default {
-  name: 'App'
+  name: 'App',
+  components: {Page, Contact, Biographie, Projets}
 }
 </script>
 
 <style>
+
+#app{
+  overflow-x: hidden;
+}
+
 
 </style>
